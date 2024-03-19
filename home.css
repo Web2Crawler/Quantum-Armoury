@@ -1,0 +1,319 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media queries */
+/* Small devices (e.g., smartphones) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%; /* Adjust width for small screens */
+        padding: 10px;
+    }
+}
+
+/* Medium devices (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 70%; /* Adjust width for medium screens */
+    }
+}
+
+/* Large devices (e.g., desktops) */
+@media (min-width: 992px) {
+    .container {
+        width: 60%; /* Adjust width for large screens */
+    }
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+ 
+nav ul li::after {
+    content: ''; /* Create a pseudo-element for the underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width of the list item */
+    height: 2px; /* Thickness of the underline */
+    background-color: #fff; /* Color of the underline */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease; /* Smooth transition for reveal */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Reveal the underline on hover */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.hero-class {
+    position: relative; /* Added for absolute positioning of content */
+}
+
+.hero {
+    text-align: center;
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/call-of-duty-warrior-with-weapon-red-desktop-wallpaper-preview.jpg');
+    padding: 100px 0; /* Increased padding for better spacing */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Added for absolute positioning of content */
+}
+
+.hero h1 {
+    font-size: 3em; /* Increased font size for the heading */
+    margin-bottom: 20px; /* Added spacing between heading and paragraph */
+}
+
+.hero p {
+    font-size: 1.5em; /* Increased font size for the paragraph */
+    margin-bottom: 30px; /* Added spacing between paragraph and buttons */
+}
+
+.hero button {
+    background-color: #fff;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.hero button:hover {
+    background-color: #605d5d; /* Darken button background color on hover */
+}
+
+.explore-categories-header {
+    background-color:  #5f3939; /* Light background color */
+    padding: 10px; /* Add padding for spacing */
+    text-align: center; /* Center align the text */
+    border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
+}
+
+.explore-categories-header p {
+    margin: 0; /* Remove default margin */
+    color: #dfd9d9; 
+    font-size: 2.4em; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+}
+
+.explore-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; /* Add padding for better spacing */
+    background-image: url('https://i.pinimg.com/originals/53/d9/cd/53d9cd303086eae0decfed3d000fc976.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire section with the background image */
+    border-radius: 10px; /* Apply border radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Category item styles */
+.category-item {
+    width: 300px;
+    height: 300px; /* Set a square dimension for better arrangement */
+    margin: 20px;
+    position: relative; /* Position relative for absolute positioning */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 10px; /* Apply border radius for rounded corners */
+    transition: all 0.5s ease; /* Add a smoother transition for all properties */
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container with the image */
+}
+
+.category-item:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+}
+
+.category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #fff; /* White text color for better visibility */
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+}
+
+.about {
+    position: relative;
+    display: inline-block; /* Ensure the container fits the content */
+    width: 100%;
+    border: black solid 1mm;
+}
+
+.about img {
+    display: block; /* Make the image a block element for better positioning */
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Position the overlay vertically centered */
+    left: 50%; /* Position the overlay horizontally centered */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.text-overlay p {
+    color: #fff; /* White text color for better visibility */
+    font-size: 18px;
+    text-align: center, justify;
+}
+
+
+.featured-products-header {
+    background: #d73b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative; /* Added for absolute positioning */
+    border:#000000 solid 1mm;
+}
+
+.featured-products-header p {
+    color: #181212;
+    font-size: 1.5em;
+    margin: 0;
+    position: relative; /* Added for positioning */
+    z-index: 1; /* Ensure the text appears above the underline */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+/* Underline effect */
+.featured-products-header p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom left; /* Transform origin at bottom left */
+    transition: transform 0.3s ease; /* Smooth transition for underline */
+}
+
+/* Hover effect */
+.featured-products-header:hover p::after {
+    transform: scaleX(1); /* Reveals the underline on hover */
+    transform-origin: bottom right; /* Change transform origin for smoother reveal */
+}
+ 
+/* Change text color on hover */
+.featured-products-header:hover p {
+    color: #cfcfcf; /* Change text color on hover */
+}
+
+.featured-products {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    background-color: #d73b3b;
+}
+
+.featured-products img{
+    height: 100%;
+    max-width: 100%;
+    flex-wrap:nowrap;
+    border: #000000 solid 1mm;
+}
+
+.featured-products p{
+    text-align: center;
+}
+
+
+footer {
+    background-color: #0e0707;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Add animation CSS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Add specific animations for different sections if needed */
+.hero-class.animated {
+    animation-delay: 0.5s; /* Delay the animation for the hero section */
+}
+
+.explore-categories-header.animated,
+.explore-categories.animated {
+    animation-delay: 1s; /* Delay the animation for the explore categories section */
+}
+
+.featured-products-header.animated,
+.featured-products.animated {
+    animation-delay: 1.5s; /* Delay the animation for the featured products section */
+}
